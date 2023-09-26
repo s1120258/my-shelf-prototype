@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShelf Login</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <script src="../src/index.js" type="module" defer></script>
+</head>
+<body>
+    <form id="login-form" action="">
+        <h1>Welcome back to Myshelf!</h1>
+        <label class="form-group">
+            <input id="login-email" type="text" class="form-control" placeholder="Email"  required>
+        </label>
+        <label class="form-group">
+            <input id="login-password" type="text" class="form-control" placeholder="Password"  required>
+        </label>
+        <button id="login-btn">Login</button>
+        <p>Don't have an accout? <a id="signup-link" href="#">Sign up here</a></p>
+        <p>Privacy Policy</p>
+    </form>
+    <form id="signup-form" action="">
+        <h1>Welcome to Myshelf!</h1>
+        <label class="form-group">
+            <input id="signup-name" type="text" class="form-control" placeholder="Name"  required>
+        </label>
+        <label class="form-group">
+            <input id="signup-email" type="text" class="form-control" placeholder="Email"  required>
+        </label>
+        <label class="form-group">
+            <input id="signup-password" type="text" class="form-control" placeholder="Password"  required>
+        </label>
+        <label class="form-group">
+            <input id="signup-conform-password" type="text" class="form-control" placeholder="Confirm Password"  required>
+        </label>
+        <button id="signup-btn">Sign Up</button>
+        <p>Do you already have an accout? <a id="login-link" href="#">Sign in</a></p>
+        <p>Privacy Policy</p>
+    </form>
+    <div id="home">
+        <h1>MyShelf</h1>
+    </div>
+</body>
+</html>
