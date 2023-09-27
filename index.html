@@ -42,6 +42,30 @@
     </form>
     <div id="home">
         <h1>MyShelf</h1>
+        <form action="">
+            <h3>Add Moments</h3>
+            <label class="form-group">
+                <input id="moment-book-title" type="text" class="form-control" placeholder="Book Title" required>
+            </label>
+            <label class="form-group">
+                <input id="moment-notes" type="text" class="form-control" placeholder="Notes" required>
+            </label>
+            <label id="checkbox" class="form-group">
+                <input type="checkbox" id="is-shared" checked>
+                <span>Do you want to share?</span>
+            </label>
+            <button id="add-moment-btn">Add</button>
+        </form>
+        <div id="moments-feed">
+            <h3>Moments Feed (Shared)</h3>
+            <div id="moments-feed-output">
+            </div>
+        </div>
+        <div id="my-moments">
+            <h3>My Moments</h3>
+            <div id="my-moments-output">
+            </div>
+        </div>
     </div>
 </body>
 </html>
