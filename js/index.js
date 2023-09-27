@@ -14,22 +14,19 @@ loginLink.addEventListener("click", () => {
 })
 
 const loginBtn = document.getElementById("login-btn")
-if (loginBtn) {
-    loginBtn.addEventListener("click", (e) => {
-        e.preventDefault()
-        const email = document.getElementById('login-email').value
-        const password = document.getElementById('login-password').value
-        login(email, password)
-    })
-}
+loginBtn.addEventListener("click", (e) => {
+    e.preventDefault()
+    const email = document.getElementById('login-email').value
+    const password = document.getElementById('login-password').value
+    login(email, password)
+})
 
 const signupBtn = document.getElementById("signup-btn")
-if (signupBtn) {
-    signupBtn.addEventListener("click", (e) => {
-        e.preventDefault()
-        const email = document.getElementById('signup-email').value
-        const password = document.getElementById('signup-password').value
-        register(email, password)
-    })
-}
+signupBtn.addEventListener("click", (e) => {
+    e.preventDefault()
+    const email = document.getElementById('signup-email').value
+    const password = document.getElementById('signup-password').value
+    const confirmPassword = document.getElementById('signup-confirm-password').value
+    register(email, password, confirmPassword)
+})
 

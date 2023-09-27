@@ -13,7 +13,12 @@ function DisplayHome() {
     home.style.display = "block";
 }
 
-export const register = (email, password) => {
+export const register = (email, password, confirmPassword) => {
+    if (password != confirmPassword) {
+        alert("Password does not match the confirm password.")
+        return
+    }
+    
     createUserWithEmailAndPassword(auth, email, password)
     .then((res) => {
         console.log(res.user)
