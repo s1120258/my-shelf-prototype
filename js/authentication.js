@@ -3,8 +3,7 @@ import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword, s
 
 const auth = getAuth(app)
 
-function DisplayHome() {
-    // window.location.replace("./home.html");
+function displayHome() {
     const loginForm = document.getElementById("login-form")
     const signupForm = document.getElementById("signup-form")
     const home = document.getElementById("home")
@@ -22,7 +21,7 @@ export const register = (email, password, confirmPassword) => {
     createUserWithEmailAndPassword(auth, email, password)
     .then((res) => {
         console.log(res.user)
-        DisplayHome()
+        displayHome()
     })
     .catch((err) => {
         alert(err.message)
@@ -35,7 +34,7 @@ export const login = (email, password) => {
     signInWithEmailAndPassword(auth, email, password)
     .then((res) => {
         console.log(res.user)
-        DisplayHome()
+        displayHome()
     })
     .catch((err) => {
         alert(err.message)
