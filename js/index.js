@@ -7,10 +7,12 @@ const loginForm = document.getElementById("login-form")
 const signupForm = document.getElementById("signup-form")
 const loginLink = document.getElementById("login-link")
 const signupLink = document.getElementById("signup-link")
+
 signupLink.addEventListener("click", () => {
     loginForm.style.display = "none";
     signupForm.style.display = "block";
 })
+
 loginLink.addEventListener("click", () => {
     loginForm.style.display = "block";
     signupForm.style.display = "none";
@@ -27,6 +29,7 @@ loginBtn.addEventListener("click", (e) => {
     updateMomentsFeed()
     updateMyMoments()
 })
+
 const signupBtn = document.getElementById("signup-btn")
 signupBtn.addEventListener("click", (e) => {
     e.preventDefault()
@@ -53,6 +56,7 @@ function createMomentHTML(elementId, title, author, notes) {
     result += '</div>'
     outputArea.innerHTML += result
 }
+
 function updateMomentsFeed() {
     momentsFeed = []
     onSnapshot( collection(db, "moments"), (snapshot) => {
@@ -73,6 +77,7 @@ function updateMomentsFeed() {
         console.log(momentsFeed)
     })
 }
+
 function updateMyMoments() {
     myMoments = []
     onSnapshot( collection(db, "moments"), (snapshot) => {
@@ -101,7 +106,7 @@ addMomentBtn.addEventListener("click", (e) => {
         author: getCurrentUserName(),
         authorId: getCurrentUserId(),
         notes: document.getElementById('moment-notes').value,
-        isShared: 1
+        isShared: document.getElementById("is-shared").checked
     }
     saveData("moments", momentData)
     if (momentData.isShared) {
@@ -109,5 +114,3 @@ addMomentBtn.addEventListener("click", (e) => {
     }
     updateMyMoments()
 })
-
-
